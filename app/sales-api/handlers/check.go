@@ -2,9 +2,10 @@ package handlers
 
 import (
 	"context"
-	"encoding/json"
 	"log"
 	"net/http"
+
+	"github.com/fd1az/go_service/foundation/web"
 )
 
 type check struct {
@@ -19,6 +20,6 @@ func (c check) readiness(ctx context.Context, w http.ResponseWriter, r *http.Req
 		Status: "Ok",
 	}
 
-	return json.NewEncoder(w).Encode(status)
+	return web.Respond(ctx, w, status, http.StatusOK)
 
 }
