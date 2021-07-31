@@ -24,6 +24,7 @@ You might want to reset your DB_HOST env var during test tear down.
 Service should start even without a DB running yet.
 symbols in profiles: https://github.com/golang/go/issues/23376 / https://github.com/google/pprof/pull/366
 */
+//test git
 
 // build is the git version of this program. It is set using build flags in the makefile.
 var build = "develop"
